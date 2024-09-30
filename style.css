@@ -71,10 +71,7 @@ header #search:focus{
 body{
     display: grid;
     grid-template-columns: 3vw 94vw 3vw;
-    grid-template-rows: 5rem auto 8rem;
-    background-size:cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    grid-template-rows: 5rem min-content 8rem;
 }
 header{
     grid-column: 2/3;
