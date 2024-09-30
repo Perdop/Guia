@@ -71,7 +71,10 @@ header #search:focus{
 body{
     display: grid;
     grid-template-columns: 3vw 94vw 3vw;
-    grid-template-rows: 5rem min-content 8rem;
+    grid-template-rows: 5rem auto 8rem;
+    height:100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 header{
     grid-column: 2/3;
