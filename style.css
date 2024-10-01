@@ -72,7 +72,6 @@ body{
     display: grid;
     grid-template-columns: 3vw 94vw 3vw;
     grid-template-rows: 5rem auto 8rem;
-    height:100vh;
 }
 header{
     grid-column: 2/3;
