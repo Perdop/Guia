@@ -115,7 +115,6 @@ nav{
     align-content: center;
     justify-content: space-between;
     padding: 0 3vw;
-    bottom:0;
 }
 nav a{
     display: block;
