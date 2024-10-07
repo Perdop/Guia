@@ -4,16 +4,17 @@ import * as settings from './settings.js'
 function searchHotKeys(x){
     let y = x.toUpperCase();
     let i = 0
-    settings.searchHotKeys.forEach(element => {
+    for (const element of settings.searchHotKeys) {
         if (y === element) {
-            let url = settings.searchAdress[i] + searchBar.value;
+            let url = settings.searchAdress[i] + searchBar.value.slice(2);
             window.open(url, '_self')
+            break
         } else{
             let url = settings.defaultEngine + searchBar.value;
             window.open(url, '_self')
         }
         i++
-    });
+    }
 }
 
 // Pesquisa
