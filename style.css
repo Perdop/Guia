@@ -4,9 +4,6 @@
     padding: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
-
-
 /* Colors */
 :root {
     /* Elements colors settings */
@@ -37,14 +34,16 @@ nav{
 }
 
 /* Images */
-nav #settings{
+nav #settingBtn{
     background: url(img/Logo.png);
     background-position: center;
+    background-repeat: no-repeat;
     background-size: 100%;
 }
-nav #add{
+nav #newBtn{
     background: url(img/AddBtn.png);
     background-position: center;
+    background-repeat: no-repeat;
     background-size: 100%;
 }
 
@@ -72,12 +71,15 @@ header #search:focus{
 main .shortcuts{
     border-radius: 10px;
 }
+main::-webkit-scrollbar{
+    display: none;
+}
 
 /* Sizes / Layout */
 body{
     display: grid;
     grid-template-columns: 3vw 94vw 3vw;
-    grid-template-rows: 5rem auto 8rem;
+    grid-template-rows: 4rem auto 8rem;
 }
 header{
     grid-column: 2/3;
@@ -123,5 +125,6 @@ nav{
 nav a{
     display: block;
     height: 80%;
+    max-width: 50%;
     aspect-ratio: 1/1;
 }

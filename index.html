@@ -4,48 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
     <title>Guia</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js" defer></script>
+    <!-- Define os atributos de textos dos elementos -->
+    <script src="modules/languages.js" defer></script>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Define altura do app / O script precisa ficar apos a tag body para otimização de carregamento  -->
-    <script src="setAppHeight.js"></script>
-    <header>
-        <input type="text" name="" id="search" placeholder="Search or type a URL">
+    <script src="modules/setAppHeight.js"></script>
+    <header aria-hidden>
+        <label for="search"></label>
+        <input type="text" id="search" >
     </header>
-    <main>
-        <div class="shortcutsDiv">
+    <main aria-hidden>
+        <div aria-hidden class="shortcutsDiv">
             <a href="" class="shortcuts"></a>
         </div>
-        <div class="shortcutsDiv">
+        <div aria-hidden class="shortcutsDiv">
             <a href="" class="shortcuts"></a>
         </div>
-        <div class="shortcutsDiv">
+        <div aria-hidden class="shortcutsDiv">
             <a href="" class="shortcuts"></a>
         </div>
-        <div class="shortcutsDiv">
+        <div aria-hidden class="shortcutsDiv">
             <a href="" class="shortcuts"></a>
         </div>
-        <div class="shortcutsDiv">
+        <div aria-hidden class="shortcutsDiv">
             <a href="" class="shortcuts"></a>
         </div>
-        <div class="shortcutsDiv">
+        <div aria-hidden class="shortcutsDiv">
             <a href="" class="shortcuts"></a>
         </div>
-        <div class="shortcutsDiv">
+        <div aria-hidden class="shortcutsDiv">
             <a href="" class="shortcuts"></a>
         </div>
-        <div class="shortcutsDiv">
+        <div aria-hidden class="shortcutsDiv">
             <a href="" class="shortcuts"></a>
         </div>
         
     </main>
-    <nav>
-        <a href="#" id="settings"></a>
-        <a href="#" id="add"></a>
+    <nav aria-hidden>
+        <a href="settings.html" id="settingBtn" ></a>
+        <a href="#" id="newBtn"></a>
     </nav>
 </body>
 </html>
