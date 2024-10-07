@@ -13,6 +13,7 @@
     --BG-Body: rgb(60,60,60);
     --BG-Search: rgba(215, 215, 215, 0.53);
     --BG-Main: none;
+    --BG-MainShortcuts:black;
     --BG-Nav: rgba(255, 121, 121, 0.37);
     /* Text colors settings */
     --Search-TxtColor: black;
@@ -27,6 +28,9 @@ header #search{
 }
 main{
     background-color: var(--BG-Main);
+}
+main .shortcuts{
+    background-color: var(--BG-MainShortcuts);
 }
 nav{
     background-color: var(--BG-Nav);
@@ -65,14 +69,15 @@ header #search{
 header #search:focus{
     outline: solid var(--Search-Outline-Focus) 3px;
 }
-
+main .shortcuts{
+    border-radius: 10px;
+}
 
 /* Sizes / Layout */
 body{
     display: grid;
     grid-template-columns: 3vw 94vw 3vw;
     grid-template-rows: 5rem auto 8rem;
-    height:100vh;
 }
 header{
     grid-column: 2/3;
@@ -95,18 +100,16 @@ main{
     margin-bottom: 10px;
 }
 main .shortcutsDiv{
-    height:fit-content;
+    height: fit-content;
     aspect-ratio: 1/1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 main .shortcuts{
-    display: block;
-    background-color: black;
+    display: flex;
     width: 90%;
     aspect-ratio: 1/1;
-    border-radius: 10px;
 }
 nav{
     grid-column: 1/4;
