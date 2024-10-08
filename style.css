@@ -12,10 +12,13 @@
     --BG-Main: none;
     --BG-MainShortcuts:black;
     --BG-Nav: rgba(255, 121, 121, 0.37);
+    --BG-NewBtnOptions: rgba(0, 0, 0, 0.384);
     /* Text colors settings */
     --Search-TxtColor: black;
     --Search-Outline: black;
-    --Search-Outline-Focus:rgba(255, 121, 121, 0.5) ;
+    --Search-Outline-Focus:rgba(255, 121, 121, 0.5);
+    --Nav-NewBtnTxt: rgba(255, 255, 255, 0.76);
+    --Nav-NewBtnTxtFocus: rgb(255, 255, 255);
 }
 body{
     background-color: var(--BG-Body);
@@ -32,19 +35,22 @@ main .shortcuts{
 nav{
     background-color: var(--BG-Nav);
 }
+nav #newBtnOptions{
+    background-color: var(--BG-NewBtnOptions);
+}
 
 /* Images */
 nav #settingBtn{
     background: url(img/Logo.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 110%;
 }
 nav #newBtn{
     background: url(img/AddBtn.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 115%;
 }
 
 /* Font settings */
@@ -57,6 +63,15 @@ header #search{
 header #search::placeholder{
     color: var(--Search-TxtColor);
 }
+nav #newBtnOptions button{
+    font-size: 2rem;
+    font-family: "Irish Grover", system-ui;
+    color: var(--Nav-NewBtnTxt);
+}
+nav #newBtnOptions button:focus, nav #newBtnOptions button:hover{
+    color: var(--Nav-NewBtnTxtFocus);
+}
+
 
 /* Decoration */
 header #search{
@@ -65,14 +80,43 @@ header #search{
     border-radius: 8px;
     padding-left: 1rem;
 }
+header #search:hover{
+    opacity: 0.8;
+}
 header #search:focus{
     outline: solid var(--Search-Outline-Focus) 3px;
 }
 main .shortcuts{
     border-radius: 10px;
 }
+main .shortcuts:hover, main .shortcuts:focus{
+    opacity: 0.7;
+    width: 93%;
+}
 main::-webkit-scrollbar{
     display: none;
+}
+nav a{
+    border-radius: 100%;
+}
+nav a:hover{
+    opacity: 0.7;
+}
+nav #newBtnOptions{
+    border-radius: 10px;
+    transform: translateY(20px); 
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease; 
+}
+nav #newBtnOptions button{
+    border: 0;
+    background: none;
+    text-align: left;
+}
+.show{
+    display: flex !important;
+    transform: translateY(0) !important; 
+    opacity: 1 !important; 
 }
 
 /* Sizes / Layout */
@@ -97,7 +141,6 @@ main{
     grid-row: 2/3;
     overflow-y: scroll;
     display: grid;
-    grid-template-columns: repeat(3, auto);
     grid-auto-rows: min-content;
     margin-bottom: 10px;
 }
@@ -127,4 +170,16 @@ nav a{
     height: 80%;
     max-width: 50%;
     aspect-ratio: 1/1;
+}
+nav #newBtnOptions{
+    position: absolute;
+    bottom: 8rem;
+    right: 0;
+    margin: 10px;
+    padding: 10px 10px 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+nav #newBtnOptions button{
+    margin-bottom: 20px;
 }
