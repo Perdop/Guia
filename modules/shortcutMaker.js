@@ -30,7 +30,7 @@ export function shortcutMaker(){
         // Define a imagem do atalho
         if (shortcutImgs[i] === 'default') { 
             let shortcutURL = new URL(shortcutLinks[i])
-            shortcut.style.backgroundImage= `URL(${shortcutURL.protocol + shortcutURL.host}/favicon.ico)`  
+            shortcut.style.backgroundImage= `URL(${shortcutURL.protocol}//${shortcutURL.host}/favicon.ico)`  
         } else{
             shortcut.style.backgroundImage = `URL(${shortcutImgs[i]})`
         }
