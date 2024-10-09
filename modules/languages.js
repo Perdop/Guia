@@ -26,5 +26,30 @@ var newBtnAriaLabel = 'New shortcut';
 newBtn.setAttribute('name', `${newBtnName}`);
 newBtn.setAttribute('aria-label', `${newBtnAriaLabel}`); 
 
-// Settings.html 
-document.title = 'Guia - Settings'
+// Footer
+var newShortcut = document.getElementById('newShortcut');
+var newShortcutName = 'New Shortcut';
+var newShortcutAriaLabel = 'New Shortcut';
+var newShortcutTxt = 'New Shortcut'
+
+newShortcut.setAttribute('name', `${newShortcutName}`);
+newShortcut.setAttribute('aria-label', `${newShortcutAriaLabel}`); 
+newShortcut.innerHTML = newShortcutTxt;
+
+var newFolder = document.getElementById('newFolder');
+var newFolderName = 'New Folder';
+var newFolderAriaLabel = 'New Folder';
+var newFolderTxt = 'New Folder'
+
+newFolder.setAttribute('name', `${newFolderName}`);
+newFolder.setAttribute('aria-label', `${newFolderAriaLabel}`); 
+newFolder.innerHTML = newFolderTxt;
+
+var manageGroup = document.getElementById('manageGroup');
+var manageGroupName = 'Manage groups';
+var manageGroupAriaLabel = 'Manage groups';
+var manageGroupTxt = 'Manage groups'
+
+manageGroup.setAttribute('name', `${manageGroupName}`);
+manageGroup.setAttribute('aria-label', `${manageGroupAriaLabel}`); 
+manageGroup.innerHTML = manageGroupTxt;

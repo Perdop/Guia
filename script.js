@@ -6,9 +6,12 @@ var searchBar = document.getElementById('search');
 searchBar.addEventListener('keydown', search.searchFunction)
 
 // Main / Define o numero de colunas
-import * as settings from './modules/settings.js';
-var main = document.querySelector('main');
-main.style.gridTemplateColumns= `repeat(${settings.defineColumns}, auto)`;
+import {defineColumns} from './modules/settings.js';
+export var main = document.querySelector('main');
+main.style.gridTemplateColumns= `repeat(${defineColumns}, auto)`;
+
+import {shortcutMaker} from './modules/shortcutMaker.js';
+shortcutMaker();
 
 // Footer
 // Abre e fecha o botao de adicionar
@@ -30,3 +33,5 @@ function newBtnFunction() {
 }
 
 newBtn.addEventListener('click', newBtnFunction); 
+// New Shortcuts
+var newShortcut = document.querySelector('#newShortcut')

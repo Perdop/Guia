@@ -10,12 +10,10 @@
     --BG-Body: rgb(60,60,60);
     --BG-Search: rgba(215, 215, 215, 0.53);
     --BG-Main: none;
-    --BG-MainShortcuts:black;
     --BG-Nav: rgba(255, 121, 121, 0.37);
     --BG-NewBtnOptions: rgba(0, 0, 0, 0.384);
     /* Text colors settings */
     --Search-TxtColor: black;
-    --Search-Outline: black;
     --Search-Outline-Focus:rgba(255, 121, 121, 0.5);
     --Nav-NewBtnTxt: rgba(255, 255, 255, 0.76);
     --Nav-NewBtnTxtFocus: rgb(255, 255, 255);
@@ -52,6 +50,10 @@ nav #newBtn{
     background-repeat: no-repeat;
     background-size: 115%;
 }
+main .shortcuts{
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
 
 /* Font settings */
 header #search{
@@ -76,7 +78,6 @@ nav #newBtnOptions button:focus, nav #newBtnOptions button:hover{
 /* Decoration */
 header #search{
     border: 0;
-    outline: solid var(--Search-Outline) 3px;
     border-radius: 8px;
     padding-left: 1rem;
 }
