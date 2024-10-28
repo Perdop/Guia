@@ -1,16 +1,16 @@
-import * as settings from './settings.js'
+import {searchHotKeys, searchAdress, defaultEngine} from './settings.js'
 
 // Verifica se o atalho confere com o de algum dos definidos, se não busca pelo padrão
-function searchHotKeys(x){
+function searchHotKey(x){
     let y = x.toUpperCase();
     let i = 0
-    for (const element of settings.searchHotKeys) {
+    for (const element of searchHotKeys) {
         if (y === element) {
-            let url = settings.searchAdress[i] + searchBar.value.slice(2);
+            let url = searchAdress[i] + searchBar.value.slice(2);
             window.open(url, '_self')
             break
         } else{
-            let url = settings.defaultEngine + searchBar.value;
+            let url = defaultEngine + searchBar.value;
             window.open(url, '_self')
         }
         i++
@@ -22,9 +22,9 @@ export function searchFunction(event){
     if (event.key === 'Enter') {
         if(searchBar.value != ''){
             if (searchBar.value[1] ===' ' ) {
-                searchHotKeys(searchBar.value[0])
+                searchHotKey(searchBar.value[0])
             } else{
-                let url = settings.defaultEngine + searchBar.value;
+                let url = defaultEngine + searchBar.value;
                 window.open(url, '_self')
             }
             
